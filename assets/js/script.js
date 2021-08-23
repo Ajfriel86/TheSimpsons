@@ -63,12 +63,11 @@ function flipCard() {
 
     checkCardMatch();
 }
-
 /*
 Functions to check if cards match or not
 */
 function checkCardMatch() {
-    let isMatch = firstCard.dataset.image === secondCard.dataset.image;
+    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     if (isMatch) perfectMatch += 1;
 
     addMove();

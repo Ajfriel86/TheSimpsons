@@ -48,7 +48,7 @@ Styling to the timer and moves counter
 }
 .gameInfo {
   color: white;
-  font-size: 25px;
+  font-size: 20px;
 }
 /*
 Styling the game container
@@ -57,7 +57,7 @@ Styling the game container
   margin: 5px 0 10px;
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-gap: 5px;
+  grid-gap: 10px;
   justify-content: center;
   perspective: 500px;
 }
@@ -67,8 +67,8 @@ Styling the divs that hold the game cards
 .memoryCard {
   position: relative;
   cursor: pointer;
-  height: 80px;
-  width: 80px;
+  height: 128px;
+  width: 128px;
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
@@ -202,7 +202,7 @@ Styling the close icon on winners message
 .close {
   align-self: flex-end;
   color: #2f64d6;
-  font-size: 3em;
+  font-size: 7px;
 }
 .close:hover,
 .close:focus {
@@ -213,7 +213,7 @@ Styling the close icon on winners message
 /*
 Media Queries
 */
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .infoContainer {
     padding: 0 20px;
   }
@@ -225,8 +225,8 @@ Media Queries
     font-size: 2em;
   }
   .memoryCard {
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
   }
   .cardFront,
   .cardBack {
@@ -301,8 +301,8 @@ Media Queries
     margin: 50px auto;
   }
   .memoryCard {
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
   }
   .cardFront,
   .cardBack {
