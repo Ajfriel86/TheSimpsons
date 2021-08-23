@@ -98,6 +98,29 @@ Style added to game cards within the div class memoryCard
   transform: rotateY(180deg);
 }
 /*
+Added styling to butons
+*/
+.styleBtn {
+  display: inline-block;
+  text-decoration: none;
+  color: #0d0d2f;
+  border: 2px solid #2f64d6;
+  padding: 10px 30px;
+  font-size: 12px;
+  background: #2f64d6;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 1.5s;
+}
+.styleBtn:hover {
+  border: 2px solid #ff81c1;
+  background: #ff81c1;
+  color: #0d0d2f;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*
 Media Queries
 */ 
 @media screen and (max-width: 1200px){
