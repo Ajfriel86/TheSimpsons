@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Description-->
+  <meta name="description" content="Simpson's Charater memory tile game">
+  <!--Search Words-->
+  <meta name="keywords" content="Simpsons, Homer, Marge, Bart, Lisa, Mr Burns, Barney, The Simpsons, Simpson's, The Simpson's, tile game, memory, flip tile game, flip tile, tile filp game, tile filp, Simpsons game, Simpson's memory tile game">
+  <!--Website Author-->
+  <meta name="author" content="Angus Friel">
+  <!-- style sheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!--Heading-->
+  <div>
+    <h1 id="hero">The Simpsons</h1>
+   <h3>Memory Tile Game</h3>
+  </div>
+
+   <!-- Game Grid container-->
+   <div class="gameContainer">
+
+    <!--Timer-->
+     <div class="infoContainer">
+       <div onclick="flipcard()" class="gameInfo">
+         <span class="timer">Timer 0:00</span>
+       </div>
+
+       <!--Moves Counter-->
+       <div class="gameInfo"> Moves
+         <span class="moves">0</span>
+       </div>
+     </div>
+
+      <!--6 double Game Cards-->
+      <div class="memoryCard" data-framework="Simp-1">
+        <img class="cardFront" src="assets/images/Bart_Simpson.png" alt="Simp-1">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-1">
+        <img class="cardFront" src="assets/images/Bart_Simpson.png" alt="Simp-1">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-2">
+        <img class="cardFront" src="assets/images/Homer_Hulk.png" alt="Simp-2">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-2">
+        <img class="cardFront" src="assets/images/Homer_Hulk.png" alt="Simp-2">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-3">
+        <img class="cardFront image-hidden" src="assets/images/Homer_Simpson.png" alt="Simp-3">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-3">
+        <img class="cardFront" src="assets/images/Homer_Simpson.png" alt="Simp-3">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-4">
+        <img class="cardFront" src="assets/images/Lisa_Simpson.png" alt="Simp-4">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-4">
+        <img class="cardFront" src="assets/images/Lisa_Simpson.png" alt="Simp-4">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Card Back">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-5">
+        <img class="cardFront" src="assets/images/Marge_Simpson.png" alt="Simp-5">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-5">
+        <img class="cardFront" src="assets/images/Marge_Simpson.png" alt="Simp-5">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-6">
+        <img class="cardFront" src="assets/images/Simpsons.png" alt="Simp-6">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+
+      <div class="memoryCard" data-framework="Simp-6">
+        <img class="cardFront" src="assets/images/Simpsons.png" alt="Simp-6">
+        <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+      </div>
+</div>
+
+<!--JavaScript-->
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>
