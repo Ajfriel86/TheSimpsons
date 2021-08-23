@@ -1,63 +1,63 @@
 /*
 Varibles
  */
- const cards = document.querySelectorAll('.memoryCard');
- const moveContainer = document.querySelector('.moves');
- const gamePlay = document.getElementById('gamePlay');
- const win = document.getElementById('win');
- const timerBox = document.querySelector('.timer');
- const MAX_MATCH = 6;
- const resetBtn = document.getElementById('resetBtn');
- const closeBtn = document.getElementById('closeBtn');
- 
- let gameOn = false;
- let cardMatch = 0;
- let flippedCard = false; 
- let lockBoard = false; 
- let firstCard, secondCard; 
- let moves = 0;
- let finalTime = "";
+const cards = document.querySelectorAll('.memoryCard');
+const moveContainer = document.querySelector('.moves');
+const gamePlay = document.getElementById('gamePlay');
+const win = document.getElementById('win');
+const timerBox = document.querySelector('.timer');
+const MAX_MATCH = 6;
+const resetBtn = document.getElementById('resetBtn');
+const closeBtn = document.getElementById('closeBtn');
 
- /*
- Event Listeners
- */
- cards.forEach(card => card.addEventListener('click', flipCard)); 
- shuffle();
- 
- resetBtn.addEventListener('click', showGamePlay); 
- closeBtn.addEventListener('click', closeGamePaly);
- 
- /*
- Functions to show and close gamePlay 
- */
- function showGamePaly() {
-     gamePlay.style.display = 'block';
- }
- 
- function closeGamePlay() {
-     gamePaly.style.display = 'none';
- }
+let gameOn = false;
+let cardMatch = 0;
+let flippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+let moves = 0;
+let finalTime = "";
+
+/*
+Event Listeners
+*/
+cards.forEach(card => card.addEventListener('click', flipCard));
+shuffle();
+
+resetBtn.addEventListener('click', showGamePlay);
+closeBtn.addEventListener('click', closeGamePaly);
+
+/*
+Functions to show and close gamePlay 
+*/
+function showGamePaly() {
+    gamePlay.style.display = 'block';
+}
+
+function closeGamePlay() {
+    gamePaly.style.display = 'none';
+}
 /*
 Function for two cards to be flipped
 */
- function flipCard() {
+function flipCard() {
     if (!gameOn) {
         gameOn = true;
         timer();
     }
-    if (lockBoard) return; 
+    if (lockBoard) return;
     if (this === firstCard) return;
 
-    this.classList.add('flip'); 
+    this.classList.add('flip');
 
-    if (!flippedCard) { 
+    if (!flippedCard) {
 
         flippedCard = true;
-        firstCard = this; 
+        firstCard = this;
 
         return;
     }
-    secondCard = this; 
+    secondCard = this;
     checkCardMatch();
 }
 /*
@@ -68,18 +68,20 @@ function checkCardMatch() {
     if (isMatch) perfectMatch += 1;
 
     addMove();
-    
+
     if (isMatch) pairMatch();
     else noMatch();
 
     if (perfectMatch === MAX_MATCH) winGame();
 }
+
 function pairMatch() {
 
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
 }
+
 function noMatch() {
     lockBoard = true;
 
@@ -119,9 +121,11 @@ function timer() {
         timerBox.innerHTML = 'Time ' + minutes + ' : ' + seconds;
     }, 1000);
 }
+
 function stopTime() {
     clearInterval(time);
 }
+
 function resetBoard() {
     [flippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
@@ -133,10 +137,11 @@ function winGame() {
     stopTime();
     showWinnerMsg();
 }
+
 function showWinnerMsg() {
-   win.style.display = 'block';
+    win.style.display = 'block';
     finalTime = timerBox.innerHTML;
-    
+
     document.getElementById('finalMove').innerHTML = moves;
     document.getElementById('totalTime').innerHTML = finalTime;
     reset();
