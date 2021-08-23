@@ -5,7 +5,7 @@ Varibles
  const moveContainer = document.querySelector('.moves');
  const gamePlay = document.getElementById('gamePlay');
  const win = document.getElementById('win');
- const timer = document.querySelector('.timer');
+ const timerBox = document.querySelector('.timer');
  const MAX_MATCH = 6;
  const resetBtn = document.getElementById('resetBtn');
  const closeBtn = document.getElementById('closeBtn');
@@ -28,7 +28,7 @@ Varibles
  closeBtn.addEventListener('click', closeGamePaly);
  
  /*
- Function to show and close gamePlay 
+ Functions to show and close gamePlay 
  */
  function showGamePaly() {
      gamePlay.style.display = 'block';
@@ -61,10 +61,10 @@ Function for two cards to be flipped
     checkCardMatch();
 }
 /*
-Function to check if cards match or not
+Functions to check if cards match or not
 */
 function checkCardMatch() {
-    let isMatch = firstCard.dataset.image === secondCard.dataset.image;
+    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     if (isMatch) perfectMatch += 1;
 
     addMove();
@@ -88,5 +88,37 @@ function noMatch() {
         secondCard.classList.remove('flip');
 
         resetBoard();
-    }, 900);
+    }, 1500);
+}
+/*
+Setting up function to add moves to move counter in index.html
+*/
+moves = 0;
+moveContainer.innerHtml = 0;
+
+function addMove() {
+    moves++;
+    moveContainer.innerHTML = moves;
+}
+/*
+Varibles and fnctions for timer 
+*/
+let time;
+let minutes = 0;
+let seconds = 0;
+let timeStart = false;
+timerBox.innerHTML = 'Time' + minutes + ' : ' + seconds;
+
+function timer() {
+    time = setInterval(function() {
+        seconds++;
+        if (seconds === 59) {
+            minutes++;
+            seconds = 0;
+        }
+        timerBox.innerHTML = 'Time ' + minutes + ' : ' + seconds;
+    }, 1000);
+}
+function stopTime() {
+    clearInterval(time);
 }

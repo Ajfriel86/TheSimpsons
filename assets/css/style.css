@@ -123,7 +123,7 @@ Media Queries
     padding: 5px;
     border-width: 1px;
   }
-  .heroBtn {
+  .styleBtn {
     padding-top: 12px;
     padding-left:  30px;
     padding-right: 30px;
@@ -195,7 +195,7 @@ Media Queries
     font-size: 2.5em;
     padding-bottom: 20px;
   }
-  #hero {
+  #title {
     font-size: 28px;
     }
   .infoContainer {
@@ -220,7 +220,7 @@ Media Queries
   .cardBack {
     padding: 3px;
   }
-  .heroBtn {
+  .styleBtn {
     font-size: 14px;
   }
  }
