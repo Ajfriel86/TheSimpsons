@@ -12,105 +12,107 @@
       <meta name="author" content="Angus Friel">
       <!-- style sheets -->
       <link rel="stylesheet" href="assets/css/style.css">
+      <!--Title-->
+      <title>The Simpsons</title>
    </head>
    <body>
       <!--Heading-->
-      <section class="title">
+      <header>
          <h1 id="title">The Simpsons</h1>
-         <h3>Memory Tile Game</h3>
-      </section>
-      <!-- Game Grid container-->
-      <section class="gameContainer">
-         <!--Moves Counter-->
-         <div class="gameInfo"> Moves
-            <span class="moves">0</span>
-         </div>
-         <!--Timer-->
+         <h3>Memory Game</h3>
+      </header>
+      <!-- Game Grid containing-->
+      <div class="gameContainer">
          <div class="infoContainer">
+            <!--Moves Counter-->
+            <div class="gameInfo"> Moves
+               <span class="moves">0</span>
+            </div>
+            <!--Timer-->
             <div onclick="flipcard()" class="gameInfo">
                <span class="timer">Timer 0:00</span>
             </div>
          </div>
          <!--6 double Game Cards-->
-         <div class="memoryCard" data-framework="Simp-1">
+         <div class="memoryCard" data-image="Simp-1">
             <img class="cardFront" src="assets/images/Bart_Simpson.png" alt="Simp-1">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-1">
+         <div class="memoryCard" data-image="Simp-1">
             <img class="cardFront" src="assets/images/Bart_Simpson.png" alt="Simp-1">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-2">
+         <div class="memoryCard" data-image="Simp-2">
             <img class="cardFront" src="assets/images/Homer_Hulk.png" alt="Simp-2">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-2">
+         <div class="memoryCard" data-image="Simp-2">
             <img class="cardFront" src="assets/images/Homer_Hulk.png" alt="Simp-2">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-3">
+         <div class="memoryCard" data-image="Simp-3">
             <img class="cardFront image-hidden" src="assets/images/Homer_Simpson.png" alt="Simp-3">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-3">
+         <div class="memoryCard" data-image="Simp-3">
             <img class="cardFront" src="assets/images/Homer_Simpson.png" alt="Simp-3">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-4">
+         <div class="memoryCard" data-image="Simp-4">
             <img class="cardFront" src="assets/images/Lisa_Simpson.png" alt="Simp-4">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-4">
+         <div class="memoryCard" data-image="Simp-4">
             <img class="cardFront" src="assets/images/Lisa_Simpson.png" alt="Simp-4">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Card Back">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-5">
+         <div class="memoryCard" data-image="Simp-5">
             <img class="cardFront" src="assets/images/Marge_Simpson.png" alt="Simp-5">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-5">
+         <div class="memoryCard" data-image="Simp-5">
             <img class="cardFront" src="assets/images/Marge_Simpson.png" alt="Simp-5">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-6">
+         <div class="memoryCard" data-image="Simp-6">
             <img class="cardFront" src="assets/images/Simpsons.png" alt="Simp-6">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-         <div class="memoryCard" data-framework="Simp-6">
+         <div class="memoryCard" data-image="Simp-6">
             <img class="cardFront" src="assets/images/Simpsons.png" alt="Simp-6">
-            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of card">
+            <img class="cardBack" src="assets/images/CardBack.jpg" alt="Backside of Card">
          </div>
-      </section>
-      <!-- Reset the Game-->
-      <section class="buttons">
-         <button class="stlyeBtn" onclick="reset()">Reset Game</button> 
+      </div>
+      <div>
+         <!--Button for Game Instructions-->
          <button id="resetBtn" class="styleBtn">How to Play</button>
-      </section>
-      <!--Instructions on how to play the game-->
-      <section class="rulesOfGamePlay">
+         <!-- Reset the Game Button-->
+         <button class="styleBtn" onclick="reset()">Reset Game</button> 
+      </div>
+      <!--instructions on how to play the game-->
+      <section>
          <div class="gamePlay" id="gamePlay">
             <div>
                <h2 class="title">How to play:</h2>
             </div>
-         </div>
-         <div class="rulesCard">
-            <ol class="rulesList">
-               <li>The game commences when the first card is flipped.</li>
-               <li>You may only flip two cards at a time</li>
-               <li>You need to match all six pairs to complete the game</li>
-               <li>To restart the game, click the reset button.</li>
-               <li>Try to beat your time</li>
-               <li> Most importanly, HAVE FUN!!</li>
-            </ol>
-            <span id="closeBtn" class="styleBtn">Play!</span>
-         </div>
+            <div class="rulesCard">
+               <ol class="rulesList">
+                  <li>The game commences when the first card is flipped.</li>
+                  <li>You may only flip two cards at a time</li>
+                  <li>You need to match all six pairs to complete the game</li>
+                  <li>To restart the game, click the reset button.</li>
+                  <li>Try to beat your time</li>
+                  <li> Most importanly, HAVE FUN!!</li>
+               </ol>
+               <span id="closeBtn" class="styleBtn">Play!</span>
+            </div>
          </div>
       </section>
-      <!-- Winners Message-->
-      <section class="winnersMsg">
+      <!-- Winners Msg-->
+      <section>
          <div class="win" id="win">
             <div class="win-content">
-               <span id="close" class="close">&times;</span>
+               <span id="close" class="close">Close &times;</span>
                <h2>U A Winna HAHAHA!</h2>
                <br>
                <p>You made <span id="finalMove"> </span> moves </p>

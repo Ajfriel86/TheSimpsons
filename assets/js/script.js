@@ -2,21 +2,21 @@
 Varibles
  */
 const cards = document.querySelectorAll('.memoryCard');
-const moveContainer = document.querySelector('.moves');
-const gamePlay = document.getElementById('gamePlay');
-const win = document.getElementById('win');
+const movesBox = document.querySelector('.moves');
 const timerBox = document.querySelector('.timer');
-const MAX_MATCH = 6;
+const gamePlay = document.getElementById('gamePlay');
 const resetBtn = document.getElementById('resetBtn');
 const closeBtn = document.getElementById('closeBtn');
+const win = document.getElementById('win');
+const MAX_MATCH = 6;
 
-let gameOn = false;
-let cardMatch = 0;
-let flippedCard = false;
-let lockBoard = false;
-let firstCard, secondCard;
+let perfectMatch = 0;
 let moves = 0;
+let gameOn = false;
+let flippedCard = false;
+let firstCard, secondCard;
 let finalTime = "";
+let lockedBoard = false;
 
 /*
 Event Listeners
@@ -25,17 +25,17 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 shuffle();
 
 resetBtn.addEventListener('click', showGamePlay);
-closeBtn.addEventListener('click', closeGamePaly);
+closeBtn.addEventListener('click', closeGamePlay);
 
 /*
-Functions to show and close gamePlay 
+Function to dsiplay and close Game Play Instructions
 */
-function showGamePaly() {
+function showGamePlay() {
     gamePlay.style.display = 'block';
 }
 
 function closeGamePlay() {
-    gamePaly.style.display = 'none';
+    gamePlay.style.display = 'none';
 }
 /*
 Function for two cards to be flipped
@@ -45,7 +45,7 @@ function flipCard() {
         gameOn = true;
         timer();
     }
-    if (lockBoard) return;
+    if (lockedBoard) return;
     if (this === firstCard) return;
 
     this.classList.add('flip');
@@ -56,15 +56,19 @@ function flipCard() {
         firstCard = this;
 
         return;
+
     }
+
     secondCard = this;
+
     checkCardMatch();
 }
+
 /*
 Functions to check if cards match or not
 */
 function checkCardMatch() {
-    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+    let isMatch = firstCard.dataset.image === secondCard.dataset.image;
     if (isMatch) perfectMatch += 1;
 
     addMove();
@@ -75,15 +79,18 @@ function checkCardMatch() {
     if (perfectMatch === MAX_MATCH) winGame();
 }
 
+
 function pairMatch() {
 
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
+
+
 }
 
 function noMatch() {
-    lockBoard = true;
+    lockedBoard = true;
 
     setTimeout(() => {
         firstCard.classList.remove('flip');
@@ -91,25 +98,28 @@ function noMatch() {
 
         resetBoard();
     }, 1500);
+
+
+
 }
 /*
 Setting up function to add moves to move counter in index.html
 */
 moves = 0;
-moveContainer.innerHtml = 0;
+movesBox.innerHtml = 0;
 
 function addMove() {
     moves++;
-    moveContainer.innerHTML = moves;
+    movesBox.innerHTML = moves;
 }
 /*
-Varibles and fnctions for timer 
+Varibles and functions for timer 
 */
 let time;
 let minutes = 0;
 let seconds = 0;
 let timeStart = false;
-timerBox.innerHTML = 'Time' + minutes + ' : ' + seconds;
+timerBox.innerHTML = 'Time ' + minutes + ' : ' + seconds;
 
 function timer() {
     time = setInterval(function() {
@@ -126,8 +136,9 @@ function stopTime() {
     clearInterval(time);
 }
 
+
 function resetBoard() {
-    [flippedCard, lockBoard] = [false, false];
+    [flippedCard, lockedBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
 /*
@@ -135,10 +146,9 @@ Displays the winner message in the index.html
 */
 function winGame() {
     stopTime();
-    showWinnerMsg();
+    showWinMessage();
 }
-
-function showWinnerMsg() {
+function showWinMessage() {
     win.style.display = 'block';
     finalTime = timerBox.innerHTML;
 
@@ -146,6 +156,7 @@ function showWinnerMsg() {
     document.getElementById('totalTime').innerHTML = finalTime;
     reset();
 }
+
 window.onclick = function(event) {
     if (event.target.id == 'close') {
         document.getElementById('win').style.display = 'none';
@@ -159,6 +170,7 @@ function shuffle() {
         let randomPosition = Math.floor(Math.random() * 16);
         cards.style.order = randomPosition;
     });
+
 }
 /*
 Function to reset the game
@@ -174,7 +186,7 @@ function reset() {
         minutes = 0;
         timerBox.innerHTML = 'Timer 0:00';
         moves = 0;
-        moveContainer.innerHTML = 0;
+        movesBox.innerHTML = 0;
         perfectMatch = 0;
         cards.forEach(cardReset => cardReset.classList.remove('flip'));
         shuffle();

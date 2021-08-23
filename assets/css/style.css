@@ -1,73 +1,81 @@
 /*
-importing google fonts
+Google Fonts
 */
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 /*
-Styling body of website
+Global style
 */
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  text-align: center;
+}
+html{
+  min-height: 100vh;
+}
 body {
   margin: 0;
   background-image: url(../images/Donut.jpg);
-  background-position:bottom;
+  background-position:center;
   background-repeat: no-repeat;
   background-color: #f8db27;
   color: white;
   font-family: 'Gloria Hallelujah', cursive;
+  backdrop-filter: blur(3px);
+  min-height: 100vh;
 }
 /*
-Styling the title of the website
+Styling titles on page and in pop up box
 */
 #title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: normal;
-  text-align: center;
-  font-size: 78px;
-  }
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+font-weight: normal;
+text-align: center;
+font-size: 40px;
+}
 /*
-Styling for the timer and moves counter
+Styling to the timer and moves counter
 */
 .infoContainer {
   grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
-  padding-top: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px;
 }
-/*
-Styling for the timer and moves counter
-*/
 .gameInfo {
   color: white;
   font-size: 25px;
 }
 /*
-Styling for the Game
+Styling the game container
 */
 .gameContainer {
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin: 5px 0 10px;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 5px;
   justify-content: center;
-  perspective: 1000px;
+  perspective: 500px;
 }
 /*
-Style added to dav class that contains the game cards
+Styling the divs that hold the game cards
 */
 .memoryCard {
   position: relative;
   cursor: pointer;
-  height: 128px;
-  width: 128px;
+  height: 80px;
+  width: 80px;
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
 }
+/*
+Making the cards rotate 
+*/
 .memoryCard:active {
   transform: scale(.97);
   transition: transform .2s;
@@ -76,7 +84,7 @@ Style added to dav class that contains the game cards
   transform: rotateY(180deg);
 }
 /*
-Style added to game cards within the div class memoryCard
+Styling to the cards
 */
 .cardFront,
 .cardBack {
@@ -94,38 +102,41 @@ Style added to game cards within the div class memoryCard
   transition: transform 500ms ease-in-out;
   backface-visibility: hidden;
 }
+/*
+Making the cards rotate 
+*/
 .cardFront {
   transform: rotateY(180deg);
 }
 /*
-Added styling to butons
+Styling the buttons
 */
 .styleBtn {
   display: inline-block;
   text-decoration: none;
   color: #0d0d2f;
-  border: 2px solid #2f64d6;
-  padding: 10px 30px;
-  font-size: 12px;
+  border: 1px solid #2f64d6;
+  padding: 12px 34px;
+  font-size: 14px;
   background: #2f64d6;
   position: relative;
   cursor: pointer;
   border-radius: 10px;
-  transition: 1.5s;
+  transition: 1s;
 }
 .styleBtn:hover {
-  border: 2px solid #ff81c1;
+  border: 1px solid #ff81c1;
   background: #ff81c1;
   color: #0d0d2f;
   text-decoration: none;
-  transition: 1.5s;
+  transition: 1s;
 }
 /*
-Styling for Game Play Instructions
+Styling the gamePlay instructions
 */
 .gamePlay {
   display: none;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   z-index: 99;
   left: 0;
@@ -134,38 +145,42 @@ Styling for Game Play Instructions
   height: 100%;
 }
 .rulesCard {
-  font-family:'Gloria Hallelujah', cursive;
   border: 0.8em solid #ff81c1;
   background-color: white;
-  border-radius: 20px;
-  margin-top: 100px;
-  margin-left: 500px;
-  margin-right: 500px; 
-  margin-bottom: 100px;
-  padding: 500px;
+  border-radius: 12px;
+  margin: 100px 500px 100px;
+  padding: 300px;
   justify-content: center;
 }
 .rulesList {
-  font-weight: 500;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
 }
 .rulesList li {
+  font-family: 'Gloria Hallelujah', cursive;
   margin-bottom: 25px;
   color: black;
   text-align: center;
 }
 /*
-Styling for winners message
+Styling the winners message
 */
 .win {
   display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: 'Gloria Hallelujah', cursive;
   position: fixed;
-  z-index: 100;
+  z-index: 99;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   color:black;
 }
+/*
+styling the paragraphs
+*/
 p {
   font-size: 120%;
   padding-bottom: 20px;
@@ -176,17 +191,13 @@ p {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  margin-top: 15px;
-  margin-left: 140px;
-  margin-right: 140px;
+  margin: 20px 150px;
   border: 0.8em solid #ff81c1;
-  padding-top: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 20px 40px;
   border-radius: 20px;
 }
 /*
-Styling for closing icon on winner message
+Styling the close icon on winners message
 */
 .close {
   align-self: flex-end;
@@ -201,24 +212,21 @@ Styling for closing icon on winner message
 }
 /*
 Media Queries
-*/ 
-@media screen and (max-width: 1200px){
+*/
+@media (min-width: 1400px) {
   .infoContainer {
-    padding-top: 0;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 0 20px;
   }
   .gameContainer {
-    margin-top: 40px;
-    margin-bottom:  40px;
+    margin: 50px 0 50px;
   }
   .gameInfo {
     color: white;
     font-size: 2em;
   }
   .memoryCard {
-    height: 128px;
-    width: 128px;
+    height: 80px;
+    width: 80px;
   }
   .cardFront,
   .cardBack {
@@ -226,15 +234,11 @@ Media Queries
     border-width: 1px;
   }
   .styleBtn {
-    padding-top: 12px;
-    padding-left:  30px;
-    padding-right: 30px;
+    padding: 12px 34px;
     font-size: 20px;
   }
   .win {
-    padding-top: 0;
-    padding-right:  350px;
-    padding-left: 350px;
+    padding: 0 350px;
     color: black;
   }
   .win-content {
@@ -245,48 +249,32 @@ Media Queries
     padding-bottom: 20px;
   }
   .rulesCard {
-    margin-top: 100px;
-    margin-left:  500px;
-    margin-right: 500px;
-    margin-bottom:  100px;
+    margin: 100px 500px 100px;
     padding: 50px;
   }
- }
- @media screen and (max-width: 900px){
+}
+@media (min-width: 768px) {
   .gameContainer {
     margin: 10px 0 40px;
   }
   .rulesCard {
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 10px;
+    margin: 10px 50px 10px;
     padding: 50px;
   }
-
- }
- @media screen and (max-width: 575px){
-  .instructions{
+}
+@media only screen and (max-width: 600px) {
+  .gamePlay{
     margin: 0;
   }
   .rulesCard {
-    margin-top: 5px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    padding-top: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom:  10px;
+    margin: 5px 15px 15px;
+    padding: 0 20px 10px;
   }
   .win {
     margin: 0;
   }
   .win-content {
-    margin-top: 20px;
-    margin-left:  20px;
-    margin-right: 20px;
-    margin-bottom:  40px;
+    margin: 20px 20px 40px;
     padding: 20px;
   }
   p {
@@ -301,9 +289,7 @@ Media Queries
     font-size: 28px;
     }
   .infoContainer {
-    padding-top: 0;
-    padding-left:  15px;
-    padding-right: 15px;
+    padding: 0 15px;
     font-size: 10px;
   }
   .gameInfo {
@@ -315,8 +301,8 @@ Media Queries
     margin: 50px auto;
   }
   .memoryCard {
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
   }
   .cardFront,
   .cardBack {
@@ -325,4 +311,5 @@ Media Queries
   .styleBtn {
     font-size: 14px;
   }
- }
+}
+
