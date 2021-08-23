@@ -17,7 +17,7 @@ body {
 /*
 Styling the title of the website
 */
-#hero {
+#title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +48,8 @@ Styling for the timer and moves counter
 Styling for the Game
 */
 .gameContainer {
-  margin: 5px 0 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 5px;
@@ -56,7 +57,7 @@ Styling for the Game
   perspective: 1000px;
 }
 /*
-Style added to game cards
+Style added to dav class that contains the game cards
 */
 .memoryCard {
   position: relative;
@@ -67,14 +68,33 @@ Style added to game cards
   transform-style: preserve-3d;
   transition: transform .5s;
 }
-/*
-Causes the card to rotate
-*/
 .memoryCard:active {
   transform: scale(.97);
   transition: transform .2s;
 }
 .memoryCard.flip {
+  transform: rotateY(180deg);
+}
+/*
+Style added to game cards within the div class memoryCard
+*/
+.cardFront,
+.cardBack {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  background: white;
+  border-radius: 12px;
+  border-width: .2px;
+  overflow: hidden;
+  transition: transform 500ms ease-in-out;
+  backface-visibility: hidden;
+}
+.cardFront {
   transform: rotateY(180deg);
 }
 /*
