@@ -122,3 +122,58 @@ function timer() {
 function stopTime() {
     clearInterval(time);
 }
+function resetBoard() {
+    [flippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+/*
+Displays the winner message in the index.html
+*/
+function winGame() {
+    stopTime();
+    showWinnerMsg();
+}
+function showWinnerMsg() {
+   win.style.display = 'block';
+    finalTime = timerBox.innerHTML;
+    
+    document.getElementById('finalMove').innerHTML = moves;
+    document.getElementById('totalTime').innerHTML = finalTime;
+    reset();
+}
+window.onclick = function(event) {
+    if (event.target.id == 'close') {
+        document.getElementById('win').style.display = 'none';
+    }
+};
+/*
+Function to Shuffle cards
+*/
+function shuffle() {
+    cards.forEach(cards => {
+        let randomPosition = Math.floor(Math.random() * 16);
+        cards.style.order = randomPosition;
+    });
+}
+/*
+Function to reset the game
+*/
+function reset() {
+    setTimeout(() => {
+        flippedCard = false;
+        [firstCard, secondCard] = [null, null];
+        stopTime();
+        gameOn = false;
+        timeStart = false;
+        seconds = 0;
+        minutes = 0;
+        timerBox.innerHTML = 'Timer 0:00';
+        moves = 0;
+        moveContainer.innerHTML = 0;
+        perfectMatch = 0;
+        cards.forEach(cardReset => cardReset.classList.remove('flip'));
+        shuffle();
+        cards.forEach(card => card.addEventListener('click', flipCard));
+    }, 500);
+
+}
