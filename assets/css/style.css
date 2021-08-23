@@ -1,0 +1,129 @@
+
+
+/*
+Media Queries
+*/ 
+@media screen and (max-width: 1200px){
+  .infoContainer {
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .gameContainer {
+    margin-top: 40px;
+    margin-bottom:  40px;
+  }
+  .gameInfo {
+    color: white;
+    font-size: 2em;
+  }
+  .memoryCard {
+    height: 128px;
+    width: 128px;
+  }
+  .cardFront,
+  .cardBack {
+    padding: 5px;
+    border-width: 1px;
+  }
+  .heroBtn {
+    padding-top: 12px;
+    padding-left:  30px;
+    padding-right: 30px;
+    font-size: 20px;
+  }
+  .win {
+    padding-top: 0;
+    padding-right:  350px;
+    padding-left: 350px;
+    color: black;
+  }
+  .win-content {
+    padding: 20px;
+  }
+  .close {
+    font-size: 2.5em;
+    padding-bottom: 20px;
+  }
+  .rulesCard {
+    margin-top: 100px;
+    margin-left:  500px;
+    margin-right: 500px;
+    margin-bottom:  100px;
+    padding: 50px;
+  }
+ }
+ @media screen and (max-width: 900px){
+  .gameContainer {
+    margin: 10px 0 40px;
+  }
+  .rulesCard {
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    padding: 50px;
+  }
+
+ }
+ @media screen and (max-width: 575px){
+  .instructions{
+    margin: 0;
+  }
+  .rulesCard {
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom:  10px;
+  }
+  .win {
+    margin: 0;
+  }
+  .win-content {
+    margin-top: 20px;
+    margin-left:  20px;
+    margin-right: 20px;
+    margin-bottom:  40px;
+    padding: 20px;
+  }
+  p {
+    font-size: 16px;
+    padding-bottom: 20px
+  }
+  .close {
+    font-size: 2.5em;
+    padding-bottom: 20px;
+  }
+  #hero {
+    font-size: 28px;
+    }
+  .infoContainer {
+    padding-top: 0;
+    padding-left:  15px;
+    padding-right: 15px;
+    font-size: 10px;
+  }
+  .gameInfo {
+    font-size: 2em;
+  }
+  .gameContainer {
+    width: 100vw;
+    grid-gap: 5px;
+    margin: 50px auto;
+  }
+  .memoryCard {
+    height: 70px;
+    width: 70px;
+  }
+  .cardFront,
+  .cardBack {
+    padding: 3px;
+  }
+  .heroBtn {
+    font-size: 14px;
+  }
+ }
