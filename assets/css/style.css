@@ -186,6 +186,20 @@ p {
   border-radius: 20px;
 }
 /*
+Styling for closing icon on winner message
+*/
+.close {
+  align-self: flex-end;
+  color: #2f64d6;
+  font-size: 3em;
+}
+.close:hover,
+.close:focus {
+  color: #ff81c1;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*
 Media Queries
 */ 
 @media screen and (max-width: 1200px){
