@@ -212,6 +212,70 @@ Styling the close icon on winners message
 /*
 Media Queries
 */
+@media (min-width: 1200px) {
+  .infoContainer {
+    padding: 0 20px;
+  }
+  .gameContainer {
+    margin: 50px 0 50px;
+  }
+  .gameInfo {
+    color: #ffffff;
+    font-size: 2em;
+  }
+  .memoryCard {
+    height: 100px;
+    width: 100px;
+  }
+  .cardFront,
+  .cardBack {
+    padding: 5px;
+    border-width: 1px;
+  }
+  .styleBtn {
+    padding: 12px 34px;
+    font-size: 20px;
+  }
+  .win {
+    padding: 0 350px;
+    color: black;
+  }
+  .win-content {
+    padding: 20px;
+  }
+  .close {
+    font-size: 2.5em;
+    padding-bottom: 20px;
+  }
+  .rulesCard {
+    margin: 100px 500px 100px;
+    padding: 50px;
+  }
+}
+@media (min-width: 1000px) {
+  .memoryCard {
+    height: 90px;
+    width: 90px;
+  }
+}
+/*
+For tablets on a landscape view
+*/
+@media (max-height: 1080px) {
+  .memoryCard {
+    height: 128px;
+    width: 128px;
+  }
+}
+@media (min-width: 768px) {
+  .gameContainer {
+    margin: 10px 0 40px;
+  }
+  .rulesCard {
+    margin: 10px 50px 10px;
+    padding: 50px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .gamePlay{
     margin: 0;
@@ -260,55 +324,6 @@ Media Queries
   }
   .styleBtn {
     font-size: 14px;
-  }
-}
-@media (min-width: 768px) {
-  .gameContainer {
-    margin: 10px 0 40px;
-  }
-  .rulesCard {
-    margin: 10px 50px 10px;
-    padding: 50px;
-  }
-}
-@media (min-width: 1200px) {
-  .infoContainer {
-    padding: 0 20px;
-  }
-  .gameContainer {
-    margin: 50px 0 50px;
-  }
-  .gameInfo {
-    color: #ffffff;
-    font-size: 2em;
-  }
-  .memoryCard {
-    height: 100px;
-    width: 100px;
-  }
-  .cardFront,
-  .cardBack {
-    padding: 5px;
-    border-width: 1px;
-  }
-  .styleBtn {
-    padding: 12px 34px;
-    font-size: 20px;
-  }
-  .win {
-    padding: 0 350px;
-    color: black;
-  }
-  .win-content {
-    padding: 20px;
-  }
-  .close {
-    font-size: 2.5em;
-    padding-bottom: 20px;
-  }
-  .rulesCard {
-    margin: 100px 500px 100px;
-    padding: 50px;
   }
 }
 
