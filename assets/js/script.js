@@ -10,10 +10,10 @@ const closeBtn = document.getElementById('closeBtn');
 const win = document.getElementById('win');
 const MAX_MATCH = 6;
 
-let perfectMatch = 0;
+let perfMatch = 0;
 let moves = 0;
-let gameOn = false;
-let flippedCard = false;
+let gameStart = false;
+let flipped = false;
 let firstCard, secondCard;
 let finalTime = "";
 let lockedBoard = false;
@@ -21,7 +21,7 @@ let lockedBoard = false;
 /*
 Event Listeners
 */
-cards.forEach(card => card.addEventListener('click', flipCard));
+cards.forEach(card => card.addEventListener('click', turnCard));
 shuffle();
 
 resetBtn.addEventListener('click', showGamePlay);
@@ -40,9 +40,9 @@ function closeGamePlay() {
 /*
 Function for two cards to be flipped
 */
-function flipCard() {
-    if (!gameOn) {
-        gameOn = true;
+function turnCard() {
+    if (!gameStart) {
+        gameStart = true;
         timer();
     }
     if (lockedBoard) return;
@@ -50,9 +50,9 @@ function flipCard() {
 
     this.classList.add('flip');
 
-    if (!flippedCard) {
+    if (!flipped) {
 
-        flippedCard = true;
+        flipped = true;
         firstCard = this;
 
         return;
@@ -68,21 +68,21 @@ Functions to check if cards match or not
 */
 function checkCardMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    if (isMatch) perfectMatch += 1;
+    if (isMatch) perfMatch += 1;
 
     addMove();
 
     if (isMatch) pairMatch();
     else noMatch();
 
-    if (perfectMatch === MAX_MATCH) winGame();
+    if (perfMatch === MAX_MATCH) winGame();
 }
 
 
 function pairMatch() {
 
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
+    firstCard.removeEventListener('click', turnCard);
+    secondCard.removeEventListener('click', turnCard);
     resetBoard();
 
 
@@ -137,7 +137,7 @@ function stopTime() {
 
 
 function resetBoard() {
-    [flippedCard, lockedBoard] = [false, false];
+    [flipped, lockedBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
 /*
@@ -176,20 +176,20 @@ Function to reset the game
 */
 function reset() {
     setTimeout(() => {
-        flippedCard = false;
+        flipped = false;
         [firstCard, secondCard] = [null, null];
         stopTime();
-        gameOn = false;
+        gameStart = false;
         timeStart = false;
         seconds = 0;
         minutes = 0;
         timerBox.innerHTML = 'Timer 0:00';
         moves = 0;
         movesBox.innerHTML = 0;
-        perfectMatch = 0;
+        perfMatch = 0;
         cards.forEach(cardReset => cardReset.classList.remove('flip'));
         shuffle();
-        cards.forEach(card => card.addEventListener('click', flipCard));
+        cards.forEach(card => card.addEventListener('click', turnCard));
     }, 500);
 
 }

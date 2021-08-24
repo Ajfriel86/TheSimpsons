@@ -26,32 +26,32 @@ https://www.youtube.com/watch?v=Y4lOwOOK7yE
 _The ideal client will be:_
 
 * Has English as a language
-* 
-* 
-* 
-*  
+* Enjoys games
+* Likes to try new games
+* Has basic computer knowledge 
+* Is competitive 
 
 #### Website user will be searching for:
 
-* 
-* 
+* easy online games to play
+* time to kill
 
 #### This website will aid them because of the following
 
-* 
-* 
-* 
-* 
+* Provides an easy to play game that will eleveate boredom
+* Provides enjoyment
+* Encourages competivitness with ones self
 
 #### Client Stories
 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
+* A user must be able to navigate the site easily.
+* A user must be able to have game rules to understand thwe concept of the game.
+* A user will be met with a grid styled game with pictures on front and back of the cards. 
+* The timer is actrivated once the user begins the game by flipping the first card.
+* Once a second card is flipped the moves counter increments by one, weather or not the cards match
+* Once all cards are matched, the timer will end and a winners message will appear displaying a message with how many moves it took the user to win and in how many seconds / minutes it took them
+* The game will automatically reset once all cards are matched. 
+* The user should be able to reset the game with a button.
   
 ## Features
 
@@ -85,7 +85,7 @@ This website was contructed in GitPod and deplopyed on GitHub. The steps taken t
 
 * Log into GitHub
 * Go to the list of repositories on the left-hand side of the screen.
-* Click on the repository - Ajfriel86/radicaltransformationyoga
+* Click on the repository - Ajfriel86/TheSimpsons
 * Choose the settings tab froim the menu items across the top of the page; it is the ninth choice and last option on the menu items.
 * Once the settings page has loaded scroll down to GitHub Pages.
 * In the source section, choose the master branch.
