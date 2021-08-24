@@ -70,6 +70,7 @@ The reset button will only reset the game after a move has been made. This will 
 ![Landing Page](./assets/readme_images/game.png)
 
 ## Testing
+![Running through the game](./assets/readme_images/game.png)](./assets/readme_images/gamedemo.mp4)
 
 
 ## Bugs
