@@ -17,7 +17,7 @@ https://www.youtube.com/watch?v=Y4lOwOOK7yE
 
 ## Project-Name: Transformative Yoga
 
-[View Deployed Site Here](https://ajfriel86.github.io/transformativeyoga/)
+[View Deployed Site Here](https://ajfriel86.github.io/TheSimpsons)
 
 
 ## UX

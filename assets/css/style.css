@@ -11,9 +11,7 @@ Global style
   box-sizing: border-box;
   text-align: center;
 }
-html{
-  min-height: 100vh;
-}
+
 body {
   margin: 0;
   background-image: url(../images/Donut.jpg);
@@ -23,7 +21,7 @@ body {
   color: white;
   font-family: 'Gloria Hallelujah', cursive;
   backdrop-filter: blur(3px);
-  min-height: 100vh;
+  
 }
 /*
 Styling titles on page and in pop up box
@@ -67,8 +65,8 @@ Styling the divs that hold the game cards
 .memoryCard {
   position: relative;
   cursor: pointer;
-  height: 128px;
-  width: 128px;
+  height: 200px;
+  width: 200px;
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
@@ -213,55 +211,6 @@ Styling the close icon on winners message
 /*
 Media Queries
 */
-@media (min-width: 1200px) {
-  .infoContainer {
-    padding: 0 20px;
-  }
-  .gameContainer {
-    margin: 50px 0 50px;
-  }
-  .gameInfo {
-    color: white;
-    font-size: 2em;
-  }
-  .memoryCard {
-    height: 100px;
-    width: 100px;
-  }
-  .cardFront,
-  .cardBack {
-    padding: 5px;
-    border-width: 1px;
-  }
-  .styleBtn {
-    padding: 12px 34px;
-    font-size: 20px;
-  }
-  .win {
-    padding: 0 350px;
-    color: black;
-  }
-  .win-content {
-    padding: 20px;
-  }
-  .close {
-    font-size: 2.5em;
-    padding-bottom: 20px;
-  }
-  .rulesCard {
-    margin: 100px 500px 100px;
-    padding: 50px;
-  }
-}
-@media (min-width: 768px) {
-  .gameContainer {
-    margin: 10px 0 40px;
-  }
-  .rulesCard {
-    margin: 10px 50px 10px;
-    padding: 50px;
-  }
-}
 @media only screen and (max-width: 600px) {
   .gamePlay{
     margin: 0;
@@ -306,10 +255,59 @@ Media Queries
   }
   .cardFront,
   .cardBack {
-    padding: 3px;
+    padding: 1px;
   }
   .styleBtn {
     font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .gameContainer {
+    margin: 10px 0 40px;
+  }
+  .rulesCard {
+    margin: 10px 50px 10px;
+    padding: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .infoContainer {
+    padding: 0 20px;
+  }
+  .gameContainer {
+    margin: 50px 0 50px;
+  }
+  .gameInfo {
+    color: white;
+    font-size: 2em;
+  }
+  .memoryCard {
+    height: 100px;
+    width: 100px;
+  }
+  .cardFront,
+  .cardBack {
+    padding: 5px;
+    border-width: 1px;
+  }
+  .styleBtn {
+    padding: 12px 34px;
+    font-size: 20px;
+  }
+  .win {
+    padding: 0 350px;
+    color: black;
+  }
+  .win-content {
+    padding: 20px;
+  }
+  .close {
+    font-size: 2.5em;
+    padding-bottom: 20px;
+  }
+  .rulesCard {
+    margin: 100px 500px 100px;
+    padding: 50px;
   }
 }
 
