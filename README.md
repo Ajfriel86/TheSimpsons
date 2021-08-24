@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=Y4lOwOOK7yE
 
 # Angus Friel
 
-## Project-Name: Transformative Yoga
+## Project-Name: The Simpsons Memory Game
 
 [View Deployed Site Here](https://ajfriel86.github.io/TheSimpsons)
 
@@ -54,20 +54,17 @@ _The ideal client will be:_
 * The user should be able to reset the game with a button.
   
 ## Features
+The website will consit of one page with a title "The Simpsons Memory Game," a grid of 12 cards, and two buttons. One on how to play the game and the other to reset the game.
 
+The moves counter will only increment when the second card hass been flipped and the timer will only commence after the first card is fillped and will end once are cards are matched. 
 
-#### Browser Icon
+The "Game Rules" button will active a pop up message displaying the concept of the game. This will will have a button "Play the Game," this will exit the Game Rules pop uo and take the user back to the game so they can play it. 
 
+The reset button will only reset the game after a move has been made. This will also reshuffle the cards.
 
-![Brower](./assets/Read_Me_Images/browser.png)
-
-### Navigation Bar
-
-![Nav Bar](./assets/Read_Me_Images/NavBar.png)
-  
 #### The Landing Page
 
-* 
+![Landing Page](./assets/readme_images/game.png)
 
 ## Testing
 

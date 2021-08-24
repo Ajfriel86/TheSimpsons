@@ -5,7 +5,7 @@ const cards = document.querySelectorAll('.memoryCard');
 const movesBox = document.querySelector('.moves');
 const timerBox = document.querySelector('.timer');
 const gamePlay = document.getElementById('gamePlay');
-const resetBtn = document.getElementById('resetBtn');
+const rulesBtn = document.getElementById('rulesBtn');
 const closeBtn = document.getElementById('closeBtn');
 const win = document.getElementById('win');
 const MAX_MATCH = 6;
@@ -24,7 +24,7 @@ Event Listeners
 cards.forEach(card => card.addEventListener('click', turnCard));
 shuffle();
 
-resetBtn.addEventListener('click', showGamePlay);
+rulesBtn.addEventListener('click', showGamePlay);
 closeBtn.addEventListener('click', closeGamePlay);
 
 /*
@@ -83,7 +83,7 @@ function pairMatch() {
 
     firstCard.removeEventListener('click', turnCard);
     secondCard.removeEventListener('click', turnCard);
-    resetBoard();
+    reloadBoard();
 
 
 }
@@ -95,7 +95,7 @@ function noMatch() {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
 
-        resetBoard();
+        reloadBoard();
     }, 1500);
 
 
@@ -136,7 +136,7 @@ function stopTime() {
 }
 
 
-function resetBoard() {
+function reloadBoard() {
     [flipped, lockedBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
@@ -187,7 +187,7 @@ function reset() {
         moves = 0;
         movesBox.innerHTML = 0;
         perfMatch = 0;
-        cards.forEach(cardReset => cardReset.classList.remove('flip'));
+        cards.forEach(cardReload => cardReload.classList.remove('flip'));
         shuffle();
         cards.forEach(card => card.addEventListener('click', turnCard));
     }, 500);
