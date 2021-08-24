@@ -13,6 +13,9 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek
 
 https://www.youtube.com/watch?v=Y4lOwOOK7yE
 
+- colour scheme
+https://www.color-hex.com/color-palette/12626
+
 # Angus Friel
 
 ## Project-Name: The Simpsons Memory Game
