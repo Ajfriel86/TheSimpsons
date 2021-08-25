@@ -1,17 +1,7 @@
 
 -Ideas for the game came from :
 
-Free code camp 
-https://marina-ferreira.github.io/tutorials/js/memory-game/
 
-Stocth - JS memeory game
-https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
-
--Videos that i watched to understand thegame : 
-
-https://www.youtube.com/watch?v=ZniVgo8U7ek
-
-https://www.youtube.com/watch?v=Y4lOwOOK7yE
 
 - colour scheme
 https://www.color-hex.com/color-palette/12626
@@ -66,15 +56,21 @@ The "Game Rules" button will active a pop up message displaying the concept of t
 The reset button will only reset the game after a move has been made. This will also reshuffle the cards.
 
 #### The Landing Page
+This is the one and only page for the JavaScript memeory card game I developed. It is the first thing the user sees when they land on the website. It meets all the user story criteria. A grid based memory card game, a button with game rule, a reset button to reshuffle and restart the game, a timer, and a moves counter. 
 
 ![Landing Page](./assets/readme_images/game.png)
 
 ## Testing
-[![Running through the game](https://www.youtube.com/watch?v=Wior1tQ-QwI)](https://www.youtube.com/watch?v=Wior1tQ-QwI)
+I made a short video of the game while I ran through it testing it for bugs and its palyability and aesthetchics. 
 
+I was testing the game to see if it would let me turn more than two cards at a time, it would not. So that test was a  success. I then tested the games buttons, and both worked correctly. Even the "Play The Game" button within the games rules pop up worked correctly. I also tested hte game to the end to see if the winners message popped up, which it did. THen I tested the close button on the winners message and that also worked correctly. 
+
+[![Game Demo for Testing](./assets/readme_images/video.png)](https://www.youtube.com/watch?v=Wior1tQ-QwI "Game Demo")
 
 ## Bugs
+I found a few bugs due to human error. I names some varibles, classes and id's wrong, or got my classes and id's mixed up. But once I corected these everything worked the way it should. 
 
+I also found some spare closing div tags that I didn't need and so, deleted these. 
 
 ## Technologies used
 
@@ -95,7 +91,21 @@ This website was contructed in GitPod and deplopyed on GitHub. The steps taken t
 
 ## Credits
 
-#### Where I got my idea and content for a yoga website
+#### Where I got my idea and content for a memory card game
+
+Here is the first site i encountered about a memory card game:
+[Free code camp ](https://marina-ferreira.github.io/tutorials/js/memory-game/)
+
+It also had a video with a walk through on how to contruct it:
+[Memory Card Game - JavaScript Tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek)
+
+I then went further with the idea and incorporated some of the elements from this tutorial:
+[Stocth - JS memeory game](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript)
+
+I also found this youtube vide very helpful:
+[Card Matching Game/Memory Card Game in JavaScript](https://www.youtube.com/watch?v=Y4lOwOOK7yE)
+
+
 
 
 
