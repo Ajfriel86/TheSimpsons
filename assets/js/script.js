@@ -15,7 +15,7 @@ let moves = 0;
 let gameStart = false;
 let flipped = false;
 let firstCard, secondCard;
-let finalTime = "";
+let endTime = "";
 let lockedBoard = false;
 
 /*
@@ -38,7 +38,7 @@ function closeGamePlay() {
     gamePlay.style.display = 'none';
 }
 /*
-Function for two cards to be flipped
+Function for two cards to be flipped, and locks the board so pnly two cards can be turned at a time, and checks to see if cards match or not
 */
 function turnCard() {
     if (!gameStart) {
@@ -64,7 +64,7 @@ function turnCard() {
     checkCardMatch();
 }
 /*
-Functions to check if cards match or not
+Functions to check if cards match or not, and adds a move to the move counter
 */
 function checkCardMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
@@ -77,7 +77,6 @@ function checkCardMatch() {
 
     if (perfMatch === MAX_MATCH) winGame();
 }
-
 
 function pairMatch() {
 
@@ -149,10 +148,10 @@ function winGame() {
 }
 function showWinMessage() {
     win.style.display = 'block';
-    finalTime = timerBox.innerHTML;
+    endTime = timerBox.innerHTML;
 
-    document.getElementById('finalMove').innerHTML = moves;
-    document.getElementById('totalTime').innerHTML = finalTime;
+    document.getElementById('lastMove').innerHTML = moves;
+    document.getElementById('allTime').innerHTML = endTime;
     reset();
 }
 
@@ -166,13 +165,13 @@ Function to Shuffle cards
 */
 function shuffle() {
     cards.forEach(cards => {
-        let randomPosition = Math.floor(Math.random() * 16);
-        cards.style.order = randomPosition;
+        let ranLocation = Math.floor(Math.random() * 12);
+        cards.style.order = ranLocation;
     });
 
 }
 /*
-Function to reset the game
+Function to reset the game, it resets the timer, shuffles cards, and resets moves counter.
 */
 function reset() {
     setTimeout(() => {
