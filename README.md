@@ -47,7 +47,7 @@ The "Game Rules" button will active a pop-up message displaying the concept of t
 The reset button will only reset the game after a move has been made. This will also reshuffle the cards.
 
 ### Colour Scheme
-The Colour scheme from the website used the Simpson colour pallet I found from the following website: 
+The Colour scheme from the website used the Simpson colour palette I found from the following website: 
 
 ![Colour Scheme](./assets/readme_images/colour.png)
 
