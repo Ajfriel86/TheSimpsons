@@ -25,8 +25,8 @@ _The ideal client will be:_
 
 #### Website user will be searching for:
 
-* easy online games to play
-* time to kill
+* Easy online games to play
+* Time to kill
 
 #### This website will aid them because of the following
 
@@ -58,6 +58,15 @@ The reset button will only reset the game after a move has been made. This will 
 This is the one and only page for the JavaScript memeory card game I developed. It is the first thing the user sees when they land on the website. It meets all the user story criteria. A grid based memory card game, a button with game rule, a reset button to reshuffle and restart the game, a timer, and a moves counter. 
 
 ![Landing Page](./assets/readme_images/game.png)
+
+#### Game Rules
+To display the concept and rules of the game, I designed a pop that would display the require content once a button was clicked. 
+
+![Game Rules Button](./assets/readme_images/grbtn.png)
+
+Once the button was clicked the content would then be displayed, like so:
+
+![Game Rules](./assets/readme_images/gamerules.png)
 
 ## Testing
 I made a short video of the game while I ran through it testing it for bugs and its palyability and aesthetchics. 
