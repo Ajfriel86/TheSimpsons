@@ -1,4 +1,3 @@
-
 -Ideas for the game came from :
 
 
@@ -66,6 +65,8 @@ I made a short video of the game while I ran through it testing it for bugs and 
 I was testing the game to see if it would let me turn more than two cards at a time, it would not. So that test was a  success. I then tested the games buttons, and both worked correctly. Even the "Play The Game" button within the games rules pop up worked correctly. I also tested hte game to the end to see if the winners message popped up, which it did. THen I tested the close button on the winners message and that also worked correctly. 
 
 [![Game Demo for Testing](./assets/readme_images/video.png)](https://www.youtube.com/watch?v=Wior1tQ-QwI "Game Demo")
+
+While testing the website
 
 ## Bugs
 I found a few bugs due to human error. I names some varibles, classes and id's wrong, or got my classes and id's mixed up. But once I corected these everything worked the way it should. 
