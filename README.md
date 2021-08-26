@@ -66,7 +66,12 @@ I was testing the game to see if it would let me turn more than two cards at a t
 
 [![Game Demo for Testing](./assets/readme_images/video.png)](https://www.youtube.com/watch?v=Wior1tQ-QwI "Game Demo")
 
-While testing the website
+While testing the website in W3 and Jigsaw I had some very minor errors. My backdrop-filter was not being recognised and causing me errors so I removed it altogether. It made the background image of the donut look a bit cleaner with the text over it but, it wasn't an essentail piece so, I removed it to combat this error. 
+
+![Error](./assets/readme_images/error.png)
+
+![Error Gone](./assets/readme_images/errornone.png)
+
 
 ## Bugs
 I found a few bugs due to human error. I names some varibles, classes and id's wrong, or got my classes and id's mixed up. But once I corected these everything worked the way it should. 
