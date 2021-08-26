@@ -81,6 +81,21 @@ While testing the website in W3 and Jigsaw I had some very minor errors. My back
 
 ![Error Gone](./assets/readme_images/errornone.png)
 
+While testing my HTML code I found to have no errors:
+
+![HTML](./assets/readme_images/htmlerrors.png)
+
+While testing my JavaScript on JSHint I found 30 warnings but, realised that I had to check the box in the configure panel. This reduced my warnings to one. 
+
+30 Warnings: 
+![JSHint](./assets/readme_images/jshint.png)
+
+Configure Menu to check boxes:
+![JSHint Configure](./assets/readme_images/jserrors2.png)
+
+
+Down to one warning: 
+![JSHint 1 Warning](./assets/readme_images/jserrors.png)
 
 ## Bugs
 I found a few bugs due to human error. I names some varibles, classes and id's wrong, or got my classes and id's mixed up. But once I corected these everything worked the way it should. 
