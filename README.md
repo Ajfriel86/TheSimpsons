@@ -6,7 +6,7 @@
 
 ## UX
 
-#### Ideal Client
+### Ideal Client
 _The ideal client will be:_
 
 * Has English as a language
@@ -15,25 +15,25 @@ _The ideal client will be:_
 * Has basic computer knowledge 
 * Is competitive 
 
-#### Website user will be searching for:
+### Website user will be searching for:
 
 * Easy online games to play
 * Time to kill
 
-#### This website will aid them because of the following
+### This website will aid them because of the following
 
 * Provides an easy to play game that will elevate boredom
 * Provides enjoyment
 * Encourages competitiveness with oneself
 
-#### Client Stories
+### Client Stories
 
 * A user must be able to navigate the site easily.
 * A user must be able to have game rules to understand thwe concept of the game.
 * A user will be met with a grid styled game with pictures on front and back of the cards. 
 * The timer is actrivated once the user begins the game by flipping the first card.
 * Once a second card is flipped the moves counter increments by one, weather or not the cards match
-* Once all cards are matched, the timer will end and a winner’s message will appear displaying a message with how many moves it took the user to win and in how many seconds / minutes it took them
+* Once all cards are matched, the timer will end, and a winner’s message will appear displaying a message with how many moves it took the user to win and in how many seconds / minutes it took them
 * The game will automatically reset once all cards are matched. 
 * The user should be able to reset the game with a button.
   
@@ -46,17 +46,17 @@ The "Game Rules" button will active a pop-up message displaying the concept of t
 
 The reset button will only reset the game after a move has been made. This will also reshuffle the cards.
 
-#### Colour Scheme
+### Colour Scheme
 The Colour scheme from the website used the Simpson colour pallet I found from the following website: 
 
 ![Color-hex](https://www.color-hex.com/color-palette/12626)
 
-#### The Landing Page
+### The Landing Page
 This is the one and only page for the JavaScript memeory card game I developed. It is the first thing the user sees when they land on the website. It meets all the user story criteria. A grid-based memory card game, a button with game rule, a reset button to reshuffle and restart the game, a timer, and a moves counter. 
 
 ![Landing Page](./assets/readme_images/game.png)
 
-#### Game Rules
+### Game Rules
 To display the concept and rules of the game, I designed a pop that would display the require content once a button was clicked. 
 
 ![Game Rules Button](./assets/readme_images/grbtn.png)
@@ -124,10 +124,20 @@ This website was contructed in GitPod and deplopyed on GitHub. The steps taken t
 * A link to the website is then diplayed, this is the deployed websites website address.    
 
 ## Credits
+### Content
+The content of this website was written by Angus Friel. 
 
-#### Where I got my idea and content for a memory card game
+### Media
+The images used on the website where sourced from google images or from icon archive:
 
-Here is the first site I encountered about a memory card game:
+![Icon Archive](https://iconarchive.com/tag/simpsons)
+
+### Code
+The html and css code I used to construct this website are from past learning outcomes from my previous courses and from what I have learned at the Code Insitiute. THe JavaScript I used for this project was incroprated from past courses I have taken, as well as from tutorials I have mentioned in my acknowledgemnts, and from what I have learned at the Code Insitiute. 
+
+### Acknowledgements
+
+Here is the first site I encountered about a memory card game. This website gave me the idea for the basis of the website that I constructed for this project:
 [Free code camp](https://marina-ferreira.github.io/tutorials/js/memory-game/)
 
 It also had a video with a walk through on how to construct it:
@@ -139,19 +149,5 @@ I then went further with the idea and incorporated some of the elements from thi
 I also found this YouTube video very helpful:
 [Card Matching Game/Memory Card Game in JavaScript](https://www.youtube.com/watch?v=Y4lOwOOK7yE)
 
-
-
-
-#### Media
-
-All pictures sourced for this website were gotten from a google search.
-
-#### Videos I used for the courses page.
-
-
-#### Code
-
-#### Acknowledgements
-
-
-
+#### Disclaimer
+The content of this Website is for educational purposes only.
