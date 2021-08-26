@@ -1,7 +1,8 @@
-![Responsive](./assets/readme_images/responsive.png)
 # Angus Friel
 
 ## Project-Name: The Simpsons Memory Game
+
+![Responsive](./assets/readme_images/responsive.png)
 
 [View Deployed Site Here](https://ajfriel86.github.io/TheSimpsons)
 
