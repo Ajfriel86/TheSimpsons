@@ -103,12 +103,12 @@ I also found some spare closing div tags that I didn't need and so, deleted thes
 
 ## Technologies used
 The technologies used for the contruction of this site are as follows: 
-* [HTML](https://en.wikipedia.org/wiki/HTML)
-* [CSS](https://en.wikipedia.org/wiki/CSS)
-* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-* [Google Fonts](https://fonts.google.com/)
-* [GitPod](gitpod.io)
-* [GitHub](https://github.com/)
+* [HTML](https://en.wikipedia.org/wiki/HTML) - This was used to contsruct the website, as it it used as markup language to display content of a website. 
+* [CSS](https://en.wikipedia.org/wiki/CSS) - This was used to style the content of the website.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - This was used to create the interactivity of the game re: the cards, timer, and moves counter. As well as the popup for the game rules and the reset button, to reset the game. 
+* [Google Fonts](https://fonts.google.com/) - This was used to get the require font that the content is written in.
+* [GitPod](gitpod.io) - This was used as an IDE, or the Intergrated Development Area, where the HTML, CSS and JavaScritp where all written in the required file types in oder to display the website. 
+* [GitHub](https://github.com/) - this was used to host the website, so it is viewable to the public.
 
 ## Deployment
 
