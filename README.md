@@ -49,9 +49,8 @@ The reset button will only reset the game after a move has been made. This will 
 ### Colour Scheme
 The Colour scheme from the website used the Simpson colour palette I found from the following website: 
 
-![Colour Scheme](./assets/readme_images/colour.png)
-
 [Color-hex](https://www.color-hex.com/color-palette/12626)
+![Colour Scheme](./assets/readme_images/colour.png)
 
 ### The Landing Page
 This is the one and only page for the JavaScript memeory card game I developed. It is the first thing the user sees when they land on the website. It meets all the user story criteria. A grid-based memory card game, a button with game rule, a reset button to reshuffle and restart the game, a timer, and a moves counter. 
