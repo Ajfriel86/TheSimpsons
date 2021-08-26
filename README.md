@@ -1,3 +1,4 @@
+![Responsive](./assets/readme_images/responsive.png)
 # Angus Friel
 
 ## Project-Name: The Simpsons Memory Game
@@ -134,7 +135,7 @@ The images used on the website where sourced from google images or from icon arc
 [Icon Archive](https://iconarchive.com/tag/simpsons)
 
 ### Code
-The html and css code I used to construct this website are from past learning outcomes from my previous courses and from what I have learned at the Code Insitiute. THe JavaScript I used for this project was incroprated from past courses I have taken, as well as from tutorials I have mentioned in my acknowledgemnts, and from what I have learned at the Code Insitiute. 
+The html and css code I used to construct this website are from past learning outcomes from my previous courses and from what I have learned at the Code Insitiute. The JavaScript I used for this project was incorporated from past courses I have taken, as well as from tutorials I have mentioned in my acknowledgemnts, and from what I have learned at the Code Insitiute. 
 
 ### Acknowledgements
 
