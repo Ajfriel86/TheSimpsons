@@ -18,7 +18,7 @@ body {
   background-position:center;
   background-repeat: no-repeat;
   background-color: #f8db27;
-  color: #ffffff;
+  color:#ffffff;
   font-family: 'Gloria Hallelujah', cursive;
 }
 /*
@@ -28,7 +28,7 @@ Styling titles on page and in pop up box
 display: flex;
 justify-content: center;
 align-items: center;
-color: #ffffff;
+color: black;
 font-weight: normal;
 text-align: center;
 font-size: 40px;
@@ -41,9 +41,11 @@ Styling to the timer and moves counter
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
+  background-color: rgba(46, 49, 49, 0.6);
+  border-radius: 12px;
 }
 .gameInfo {
-  color: #ffffff;
+  color: black;
   font-size: 20px;
 }
 /*
@@ -132,9 +134,9 @@ Styling the buttons
 Styling the gamePlay instructions
 */
 .gamePlay {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 99;
   left: 0;
   top: 0;
@@ -144,10 +146,12 @@ Styling the gamePlay instructions
 .rulesCard {
   border: 0.8em solid #ff81c1;
   background-color: #ffffff;
+  color: black;
   border-radius: 12px;
   margin: 100px 500px 100px;
   padding: 300px;
-  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto
 }
 .rulesList {
   font-weight: 600;

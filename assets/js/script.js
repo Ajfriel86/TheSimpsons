@@ -127,6 +127,9 @@ function timer() {
             minutes++;
             seconds = 0;
         }
+        if (seconds < 10) {
+            seconds = '0' + seconds;
+          }
         timerBox.innerHTML = 'Time ' + minutes + ' : ' + seconds;
     }, 1000);
 }
