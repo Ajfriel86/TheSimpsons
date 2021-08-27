@@ -71,7 +71,10 @@ Once the button was clicked the content would then be displayed, like so:
 ## Testing
 I made a short video of the game while I ran through it testing it for bugs and its palyability and aesthetchics. 
 
-I was testing the game to see if it would let me turn more than two cards at a time, it would not. So that test was a success. I then tested the games buttons, and both worked correctly. Even the "Play the Game" button within the game’s rules pop up worked correctly. I also tested hte game to the end to see if the winners message popped up, which it did. THen I tested the close button on the winner’s message and that also worked correctly. 
+I was testing the game to see if it would let me turn more than two cards at a time. The result of this test was psoitive as only two cards at a time could be turned.
+I then tested the games buttons, and both worked correctly. Even the "Play the Game" button within the game’s rules pop up worked correctly. 
+I also tested the game to the end to see if the winners message popped up, which it did. 
+Then I tested the close button on the winner’s message and that also worked correctly. 
 
 [![Game Demo for Testing](./assets/readme_images/video.png)](https://www.youtube.com/watch?v=Wior1tQ-QwI "Game Demo")
 

@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */ 
+/*jshint esversion: 6 */
 /*
 Varibles
  */
@@ -118,7 +118,7 @@ function timer() {
         }
         if (seconds < 10) {
             seconds = '0' + seconds;
-          }
+        }
         timerBox.innerHTML = 'Time ' + minutes + ' : ' + seconds;
     }, 1000);
 }
