@@ -58,6 +58,7 @@ Styling the game container
   grid-gap: 10px;
   justify-content: center;
   perspective: 500px;
+  z-index: 1;
 }
 /*
 Styling the divs that hold the game cards
@@ -134,16 +135,15 @@ Styling the buttons
 Styling the gamePlay instructions
 */
 .gamePlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 99;
+  display: none;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
 }
 .rulesCard {
+  justify-content: center;
   border: 0.8em solid #ff81c1;
   background-color: #ffffff;
   color: black;
@@ -186,7 +186,7 @@ p {
   font-size: 120%;
   padding-bottom: 20px;
 }
-.win-content {
+.winContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -242,7 +242,7 @@ Media Queries
     padding: 0 350px;
     color: black;
   }
-  .win-content {
+  .winContent {
     padding: 20px;
   }
   .close {
@@ -289,7 +289,7 @@ For tablets on a landscape view
   .win {
     margin: 0;
   }
-  .win-content {
+  .winContent {
     margin: 20px 20px 40px;
     padding: 20px;
   }

@@ -16,7 +16,7 @@ let moves = 0;
 let gameStart = false;
 let flipped = false;
 let firstCard, secondCard;
-let endTime = "";
+let endTime = '';
 let lockedBoard = false;
 
 /*
@@ -38,8 +38,11 @@ function showGamePlay() {
 function closeGamePlay() {
     gamePlay.style.display = 'none';
 }
+
 /*
-Function for two cards to be flipped, and locks the board so pnly two cards can be turned at a time, and checks to see if cards match or not
+Function for two cards to be flipped, and locks the board so
+only two cards can be turned at a time, and checks to see 
+if cards match or not
 */
 function turnCard() {
     if (!gameStart) {
@@ -48,59 +51,44 @@ function turnCard() {
     }
     if (lockedBoard) return;
     if (this === firstCard) return;
-
     this.classList.add('flip');
-
     if (!flipped) {
-
         flipped = true;
         firstCard = this;
-
         return;
-
     }
-
     secondCard = this;
-
     checkCardMatch();
 }
+
 /*
-Functions to check if cards match or not, and adds a move to the move counter
+Functions to check if cards match or not, 
+and adds a move to the move counter
 */
 function checkCardMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     if (isMatch) perfMatch += 1;
-
     addMove();
-
     if (isMatch) pairMatch();
     else noMatch();
-
     if (perfMatch === MAX_MATCH) winGame();
 }
 
 function pairMatch() {
-
     firstCard.removeEventListener('click', turnCard);
     secondCard.removeEventListener('click', turnCard);
     reloadBoard();
-
-
 }
 
 function noMatch() {
     lockedBoard = true;
-
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-
         reloadBoard();
     }, 1500);
-
-
-
 }
+
 /*
 Setting up function to add moves to move counter in index.html
 */
@@ -111,6 +99,7 @@ function addMove() {
     moves++;
     movesBox.innerHTML = moves;
 }
+
 /*
 Varibles and functions for timer 
 */
@@ -138,11 +127,11 @@ function stopTime() {
     clearInterval(time);
 }
 
-
 function reloadBoard() {
     [flipped, lockedBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
+
 /*
 Displays the winner message in the index.html
 */
@@ -150,6 +139,7 @@ function winGame() {
     stopTime();
     showWinMessage();
 }
+
 function showWinMessage() {
     win.style.display = 'block';
     endTime = timerBox.innerHTML;
@@ -164,6 +154,7 @@ window.onclick = function(event) {
         document.getElementById('win').style.display = 'none';
     }
 };
+
 /*
 Function to Shuffle cards
 */
@@ -172,8 +163,8 @@ function shuffle() {
         let ranLocation = Math.floor(Math.random() * 12);
         cards.style.order = ranLocation;
     });
-
 }
+
 /*
 Function to reset the game, it resets the timer, shuffles cards, and resets moves counter.
 */
@@ -194,5 +185,4 @@ function reset() {
         shuffle();
         cards.forEach(card => card.addEventListener('click', turnCard));
     }, 500);
-
 }
