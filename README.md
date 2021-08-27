@@ -76,6 +76,12 @@ I then tested the games buttons, and both worked correctly. Even the "Play the G
 I also tested the game to the end to see if the winners message popped up, which it did. 
 Then I tested the close button on the winner’s message and that also worked correctly. 
 
+I also tested the webisite on various screen sizes using Chromes Dev Tools. The screen size testing was as follows:
+* Moto G4
+* Galaxy S5
+* Pixel 2 / 2XL
+* All iPhone & iPad Sizes. I also added a max-height within a media query for landscape use of  the iPad
+
 [![Game Demo for Testing](./assets/readme_images/video.png)](https://www.youtube.com/watch?v=Wior1tQ-QwI "Game Demo")
 
 While testing the website in W3 and Jigsaw I had some very minor errors. My backdrop-filter was not being recognised and causing me errors, so I removed it altogether. It made the background image of the donut look a bit cleaner with the text over it but, it wasn't an essentail piece so, I removed it to combat this error. 
